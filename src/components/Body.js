@@ -53,7 +53,10 @@ const Body = () => {
             <div className="res-container">
                 {
                     filteredRestaurants?.map((restaurant) => {
-                        return <Link style={{ textDecoration: 'none' }} key={restaurant?.info.id} to={"/restaurant/"+restaurant?.info.id}><RestaurantCard  resData={restaurant} /></Link>;
+                        return <Link style={{
+                            textDecoration: 'none', color: "black"
+                        }} 
+                        key={restaurant?.info.id} to={"/restaurant/" + restaurant?.info.id}><RestaurantCard resData={restaurant} /></Link>;
                     })
                 }
             </div>
