@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 
 // useState()
@@ -30,7 +31,10 @@ const Body = () => {
 
     //conditional rendering
 
-    return listOfRestaurants.length === 0 ? <Shimmer /> : (
+    const onlineStatus = useOnlineStatus();
+    if (!onlineStatus) return (<h1>LOoks like your are Offline!! Please Check your are internet connection</h1>)
+
+    return listOfRestaurants.length === 0 ? (<Shimmer />) : (
         <div className="body">
             <div className="filter">
                 <div className="search">
@@ -55,8 +59,8 @@ const Body = () => {
                     filteredRestaurants?.map((restaurant) => {
                         return <Link style={{
                             textDecoration: 'none', color: "black"
-                        }} 
-                        key={restaurant?.info.id} to={"/restaurant/" + restaurant?.info.id}><RestaurantCard resData={restaurant} /></Link>;
+                        }}
+                            key={restaurant?.info.id} to={"/restaurant/" + restaurant?.info.id}><RestaurantCard resData={restaurant} /></Link>;
                     })
                 }
             </div>
