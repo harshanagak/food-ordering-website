@@ -36,25 +36,28 @@ const Body = () => {
 
     return listOfRestaurants.length === 0 ? (<Shimmer />) : (
         <div className="body">
-            <div className="filter">
-                <div className="search">
-                    <input type="text" className="search-box" value={searchText} onChange={(e) => {
+            <div className="filter flex">
+                <div >
+                    <input type="text" className="ml-5 border border-solid border-black" value={searchText} onChange={(e) => {
                         setSearchText(e.target.value)
                     }}
                     />
-                    <button onClick={() => {
+                    <button className="px-4 py-2 bg-green-100 m-4 rounded-lg" onClick={() => {
                         const filteredResList = listOfRestaurants?.filter((res) => res?.info?.name.toLowerCase().includes(searchText.toLowerCase()));
                         setFilteredRestaurants(filteredResList);
                     }}
                     >Search</button>
                 </div>
-                <button className="filter-btn"
-                    onClick={() => {
-                        const filteredResList = listOfRestaurants?.filter((res) => { return res?.info?.avgRating > 4.3 });
-                        setListOfRestaurants(filteredResList);
-                    }}>Top Rated Restaurant</button>
+                <div className="search mx-4 px-4 flex items-center">
+                    <button className="px-4 py-2 bg-gray-100 rounded-lg"
+                        onClick={() => {
+                            const filteredResList = listOfRestaurants?.filter((res) => { return res?.info?.avgRating > 4.3 });
+                            setListOfRestaurants(filteredResList);
+                        }}>Top Rated Restaurant</button>
+                </div>
+
             </div>
-            <div className="res-container">
+            <div className="flex flex-wrap">
                 {
                     filteredRestaurants?.map((restaurant) => {
                         return <Link style={{
