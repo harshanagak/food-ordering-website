@@ -15,7 +15,7 @@ const RestaurantCard = (props) => {
 
   return (
     <div className="m-4 p-4 w-52 rounded-lg bg-gray-100 hover:bg-gray-200"
-     >
+    >
       <img
         className="rounded-lg"
         alt="res-logo"
@@ -29,5 +29,16 @@ const RestaurantCard = (props) => {
     </div>
   );
 };
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">Promoted</label>
+        <RestaurantCard {...props}/>
+      </div>
+    )
+  }
+}
 
 export default RestaurantCard;
