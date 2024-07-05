@@ -26,11 +26,11 @@
   "homepage": "https://github.com/harshanagak/namaste-react#readme",
   "devDependencies": {
     "parcel": "^2.12.0",
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.39"
   },
   "dependencies": {
     "autoprefixer": "^9.8.8",
-    "postcss": "^7.0.39",
     "postcss-loader": "^8.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
