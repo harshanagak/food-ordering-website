@@ -1,7 +1,7 @@
 {
-  "name": "namaste-react",
+  "name": "namasate-react",
   "version": "1.0.0",
-  "description": "This is Namaste React by Akshay Saini",
+  "description": "this is namaste react by akshay saini",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -9,25 +9,33 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/namastedev/namaste-react.git"
+    "url": "git+https://github.com/harshanagak/namaste-react.git"
   },
-  "keywords": [],
-  "author": "Akshay Saini",
+  "keywords": [
+    "reaact",
+    "namaste",
+    "react",
+    "harsha",
+    "javascript"
+  ],
+  "author": "Harsha Naga K",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/namastedev/namaste-react/issues"
+    "url": "https://github.com/harshanagak/namaste-react/issues"
   },
-  "homepage": "https://github.com/namastedev/namaste-react#readme",
+  "homepage": "https://github.com/harshanagak/namaste-react#readme",
   "devDependencies": {
-    "parcel": "^2.8.3",
-    "postcss": "^8.4.24",
-    "process": "^0.11.10",
-    "tailwindcss": "^3.3.2"
+    "parcel": "^2.12.0",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.39"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2"
+    "autoprefixer": "^9.8.8",
+    "postcss-loader": "^8.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   },
   "browserslist": [
     "last 2 versions"
