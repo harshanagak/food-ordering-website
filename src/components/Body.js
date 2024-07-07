@@ -36,7 +36,8 @@ const Body = () => {
     const onlineStatus = useOnlineStatus();
     if (!onlineStatus) return (<h1>LOoks like your are Offline!! Please Check your are internet connection</h1>)
 
-    return listOfRestaurants.length === 0 ? (<Shimmer />) : (
+    // return listOfRestaurants.length === 0 ? (<Shimmer />) : (
+    return (
         <div className="body">
             <div className="filter flex">
                 <div >
