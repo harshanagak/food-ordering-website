@@ -11,7 +11,9 @@ const RestaurantMenu = () => {
 
   const dummy = "Dummy Data";
 
-  const resInfo = useRestaurantMenu(10576);
+  const resInfo = useRestaurantMenu(resId);
+
+  console.log(resId);
 
   const [showIndex, setShowIndex] = useState(resId);
 
