@@ -7,6 +7,8 @@ import RestaurantCategory from './RestaurantCategory';
 
 const RestaurantMenu = () => {
 
+  // return (<div>Hello World</div>);
+
   const { resId } = useParams();
 
   const dummy = "Dummy Data";
